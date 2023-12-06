@@ -11,7 +11,7 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
-
+st.write(auth_token)
 
 with col1:
     first = st.text_input('First Name:')
@@ -35,4 +35,5 @@ if send and first and last and num:
 
 if send and (not first or not last or not num):
     st.write('*Please fill in all fields.*')
+    
 
