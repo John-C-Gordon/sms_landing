@@ -11,16 +11,30 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.app.goo.gl/JzPcxzCpZSBdk2c49");
-background-size: cover;
-}
-</style>
-'''
+def set_bg_hack(main_bg):
+    '''
+    A function to unpack an image from root folder and set as bg.
+ 
+    Returns
+    -------
+    The background.
+    '''
+    # set bg name
+    main_bg_ext = "png"
+        
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()});
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+set_bg_hack("image.png")
 
 with col1:
     first = st.text_input('First Name:')
