@@ -14,7 +14,7 @@ col1, col2 = st.columns(2)
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://drive.google.com/file/d/1S9RQ4HIbuYMs0T17wxGckYrMuVabyc4B/view?usp=sharing");
+background-image: url("https://drive.google.com/file/d/1S9RQ4HIbuYMs0T17wxGckYrMuVabyc4B/view");
 background-size: cover;
 }
 </style>
