@@ -40,6 +40,8 @@ num = st.text_input('Phone Number:')
 
 send = st.button('Add Yourself to Our List!')
 
+st.image('image.jpg')
+
 if send and first and last and num:
     message = client.messages \
                     .create(
