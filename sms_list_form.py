@@ -23,7 +23,7 @@ def set_bg_hack_url():
          f"""
          <style>
          .stApp {{
-             background: url("https://cdn.pixabay.com/photo/2020/06/19/22/33/wormhole-5319067_960_720.jpg");
+             background: url("https://images.app.goo.gl/JzPcxzCpZSBdk2c49");
              background-size: cover
          }}
          </style>
