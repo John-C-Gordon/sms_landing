@@ -23,7 +23,7 @@ def set_bg_hack_url():
          f"""
          <style>
          .stApp {{
-             background: url("https://images.app.goo.gl/kVLCoBJwhZaWc8Pu5");
+             background: url("https://images.app.goo.gl/TMznTtf2xH3Jaozj6");
              background-size: cover
          }}
          </style>
