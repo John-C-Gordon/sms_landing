@@ -28,7 +28,7 @@ col1, col2 = st.columns(2)
 #       )
 # side_bg = 'image.jpg'
 # sidebar_bg(side_bg)
-st.image('image.jpg')
+# st.image('image.jpg')
 
 with col1:
     first = st.text_input('First Name:')
@@ -39,6 +39,8 @@ with col2:
 num = st.text_input('Phone Number:')
 
 send = st.button('Add Yourself to Our List!')
+
+st.image('image.jpg')
 
 
 if send and first and last and num:
