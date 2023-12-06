@@ -30,6 +30,8 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
+set_background('image.jpg')
+
 with col1:
     first = st.text_input('First Name:')
 
