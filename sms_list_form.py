@@ -24,8 +24,6 @@ page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-image: url("data:image/png;base64,{img}");
-background-size: cover;
-background-repeat: no-repeat;
 }}
 </style>
 """
