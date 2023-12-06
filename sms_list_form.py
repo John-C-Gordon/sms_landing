@@ -2,6 +2,15 @@
 import os
 from twilio.rest import Client
 import streamlit as st
+import base64
+
+@st.experimental_memo
+def get_img_as_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+img = get_img_as_base64("image.jpg")
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
@@ -11,12 +20,13 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
-page_bg_img = """
+page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"] {
-background-image: url("image.jpg");
+[data-testid="stAppViewContainer"] > div:first-child {{
+background-image: url("data:image/png;base64,{img}");
 background-size: cover;
-}
+background-repeat: no-repeat;
+}}
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
