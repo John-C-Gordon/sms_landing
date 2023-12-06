@@ -22,7 +22,7 @@ col1, col2 = st.columns(2)
 
 page_bg_img = """
 <style>
-[data-testid="stAppViewContainer"] > div:first-child {{
+[data-testid="stAppViewContainer"] > .main {{
 background-image: url("data:image/png;base64,{img}");
 background-size: cover;
 background-repeat: no-repeat;
