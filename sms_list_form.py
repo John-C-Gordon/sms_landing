@@ -26,7 +26,7 @@ def sidebar_bg(side_bg):
       """,
       unsafe_allow_html=True,
       )
-side_bg = 'image.png'
+side_bg = 'image.jpg'
 sidebar_bg(side_bg)
 # st.image('image.jpg')
 
