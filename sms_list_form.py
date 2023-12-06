@@ -2,13 +2,6 @@
 import os
 from twilio.rest import Client
 import streamlit as st
-import base64
-
-@st.experimental_memo
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
@@ -18,19 +11,16 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
-def set_background(png_file):
-    bin_str = get_base64(png_file)
-    page_bg_img = '''
-    <style>
-    .stApp {
-    background-image: url("data:image.jpg;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://drive.google.com/file/d/1S9RQ4HIbuYMs0T17wxGckYrMuVabyc4B/view?usp=sharing");
+background-size: cover;
+}
+</style>
+'''
 
-set_background('image.jpg')
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 with col1:
     first = st.text_input('First Name:')
