@@ -5,8 +5,8 @@ import streamlit as st
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
-account_sid = 'AC9013123df2b0b98901639b236ce3a1f4'
-auth_token = '90e158ced56010db6ab13e56a9438fea'
+account_sid = os.environ['TWILIO_ACCOUNT_SID']
+auth_token = os.environ['TWILIO_AUTH_TOKEN']
 client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
