@@ -11,6 +11,16 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+background-image: url("image.jpg");
+background-size: cover;
+}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 with col1:
     first = st.text_input('First Name:')
 
