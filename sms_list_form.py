@@ -40,7 +40,7 @@ num = st.text_input('Phone Number:')
 
 send = st.button('Add Yourself to Our List!')
 
-st.image('image.jpg')
+st.image('image2.jpg')
 
 
 if send and first and last and num:
