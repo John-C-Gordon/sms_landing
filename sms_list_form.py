@@ -3,7 +3,6 @@ import os
 from twilio.rest import Client
 import streamlit as st
 import base64
-
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
 account_sid = st.secrets["TWILIO_ACCOUNT_SID"]
