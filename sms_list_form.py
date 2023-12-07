@@ -11,12 +11,12 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
-from streamlit_gsheets import GSheetsConnection
+# from streamlit_gsheets import GSheetsConnection
 
-# Create a connection object.
-conn = st.connection("gsheets", type=GSheetsConnection)
+# # Create a connection object.
+# conn = st.connection("gsheets", type=GSheetsConnection)
 
-df = conn.read()
+# df = conn.read()
 
 with col1:
     first = st.text_input('First Name:')
