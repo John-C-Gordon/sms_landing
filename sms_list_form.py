@@ -24,7 +24,7 @@ with col1:
 with col2:
     last = st.text_input('Last Name:')
 
-num = st.text_input('Phone *Number* (in the format "8935558787"):')
+num = st.text_input('Phone Number *(in the format "8935558787")*:')
 
 send = st.button('Add Yourself to Our List!')
 
@@ -33,7 +33,7 @@ if send and first and last and num:
                     .create(
                         body='NEW SUBSCRIBER:\n' + '{}'.format(first) + ' ' + '{}'.format(last) + ': {}'.format(num),
                         from_='+18558677021',
-                        to=st.secrets[PHONE_NUM]
+                        to='+17577105116'
                     )
 
     st.write('*Got it! You should receive a confirmation from in a few moments. If you do not hear from us within 24 hours, please reach out to cougarbeatrice@gmail.com.*')
