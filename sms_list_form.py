@@ -12,23 +12,12 @@ client = Client(account_sid, auth_token)
 st.title("You're Almost There!")
 col1, col2 = st.columns(2)
 
-# def sidebar_bg(side_bg):
+from streamlit_gsheets import GSheetsConnection
 
-#    side_bg_ext = 'jpg'
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
 
-#    st.markdown(
-#       f"""
-#       <style>
-#       [data-testid="stAppViewContainer"] > div:first-child {{
-#           background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
-#       }}
-#       </style>
-#       """,
-#       unsafe_allow_html=True,
-#       )
-# side_bg = 'image.jpg'
-# sidebar_bg(side_bg)
-# st.image('image.jpg')
+df = conn.read()
 
 with col1:
     first = st.text_input('First Name:')
